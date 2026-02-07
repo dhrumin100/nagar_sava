@@ -4,6 +4,7 @@ __pycache__/
 *.pyc
 venv/
 .venv/
+env/
 
 # Environment variables
 .env
@@ -31,14 +32,29 @@ npm-debug.log*
 
 # Cache
 .cache/
+.vite/
+
+# Model files (IMPORTANT - Large files)
 *.pt
 *.pth
+*.h5
+*.onnx
+*.pkl
+*.joblib
+runs/
+models/
 
-# Test files
+# Test files and data
 test_images/
 training_data/
+temp_*.jpg
+temp_*.png
 
 # Large files
 *.zip
 *.tar.gz
 blacklist_cache.json
+
+# Temporary files
+*.tmp
+*.temp
