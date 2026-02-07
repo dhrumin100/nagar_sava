@@ -1,0 +1,11 @@
+flask
+flask-cors
+opencv-python
+numpy
+mediapipe
+pillow
+python-dotenv
+tensorflow
+cvlib
+easyocr>=1.7.0
+ultralytics

@@ -1,0 +1,237 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Ensure the page has a background */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
+}
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Light Mode Variables - Clean, airy, professional */
+    --background: 210 40% 98%;
+    /* Soft cool gray/white */
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    /* Brand Colors - Refined BHIM Palette */
+    --primary: 25 95% 53%;
+    /* Vibrant Orange */
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 25 95% 65%;
+
+    --secondary: 142 70% 29%;
+    /* Deep Green */
+    --secondary-foreground: 0 0% 100%;
+
+    /* Civic Colors */
+    --civic-blue: 217 91% 60%;
+    --civic-green: 142 70% 29%;
+    --civic-orange: 25 95% 53%;
+    --civic-purple: 262 80% 50%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 25 95% 53%;
+
+    --radius: 0.75rem;
+
+    /* Gradients - Smoother, more modern */
+    --gradient-primary: linear-gradient(135deg, hsl(25 95% 53%), hsl(340 75% 55%));
+    /* Orange to Pink/Red */
+    --gradient-success: linear-gradient(135deg, hsl(142 70% 29%), hsl(142 70% 45%));
+    /* Deep Green */
+    --gradient-hero: linear-gradient(135deg, hsla(25, 95%, 53%, 0.08), hsla(142, 70%, 29%, 0.08));
+    --gradient-card: linear-gradient(180deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.5));
+
+    /* Shadows & Glows */
+    --shadow-glow: 0 0 40px -10px rgba(255, 153, 51, 0.3);
+    --shadow-card: 0 4px 20px -2px rgba(0, 0, 0, 0.05);
+    --shadow-elegant: 0 20px 40px -10px rgba(0, 0, 0, 0.08);
+
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+    /* Sidebar */
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    /* Dark Mode Variables - Deep, rich, high contrast */
+    --background: 222.2 47.4% 11.2%;
+    /* Slate 950 */
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 47.4% 13%;
+    /* Slightly lighter than bg */
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 47.4% 11.2%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 25 95% 53%;
+    --primary-foreground: 210 40% 98%;
+    --primary-glow: 25 95% 40%;
+
+    --secondary: 142 70% 35%;
+    --secondary-foreground: 0 0% 100%;
+
+    /* Civic Colors - Lighter for Dark Mode */
+    --civic-blue: 217 91% 60%;
+    --civic-green: 142 70% 45%;
+    --civic-orange: 25 95% 60%;
+    --civic-purple: 262 80% 60%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 25 95% 53%;
+
+    --gradient-primary: linear-gradient(135deg, hsl(25 95% 53%), hsl(340 75% 55%));
+    --gradient-success: linear-gradient(135deg, hsl(142 70% 29%), hsl(142 70% 45%));
+    --gradient-hero: linear-gradient(135deg, hsla(25, 95%, 53%, 0.15), hsla(142, 70%, 29%, 0.15));
+    --gradient-card: linear-gradient(180deg, hsla(222.2, 47.4%, 15%, 0.8), hsla(222.2, 47.4%, 13%, 0.4));
+
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    min-height: 100vh;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-heading tracking-tight;
+  }
+
+  #root {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@layer utilities {
+  .gradient-text {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+  }
+
+  .animate-fade-in {
+    animation: fade-in 0.6s ease-out;
+  }
+
+  .animate-scale-in {
+    animation: scale-in 0.4s ease-out;
+  }
+
+  .animate-glow-pulse {
+    animation: glow-pulse 2s ease-in-out infinite;
+  }
+
+  .shadow-elegant {
+    box-shadow: var(--shadow-elegant);
+  }
+
+  .shadow-card {
+    box-shadow: var(--shadow-card);
+  }
+
+  .bg-gradient-civic {
+    background: var(--gradient-primary);
+  }
+
+  .bg-gradient-card {
+    background: var(--gradient-card);
+  }
+
+  .bg-gradient-hero {
+    background: var(--gradient-hero);
+  }
+
+  /* Custom Chart Tooltip Styling */
+  .recharts-tooltip-wrapper {
+    z-index: 1000 !important;
+  }
+
+  .chart-tooltip {
+    background: rgba(255, 255, 255, 0.98) !important;
+    border: 1px solid rgba(0, 0, 0, 0.1) !important;
+    border-radius: 8px !important;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05) !important;
+    backdrop-filter: blur(12px) !important;
+    padding: 12px !important;
+  }
+
+  .chart-tooltip-label {
+    color: #1f2937 !important;
+    font-weight: 600 !important;
+    font-size: 14px !important;
+    margin-bottom: 4px !important;
+  }
+
+  .chart-tooltip-value {
+    color: #2563eb !important;
+    font-weight: 700 !important;
+    font-size: 16px !important;
+  }
+}

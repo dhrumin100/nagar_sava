@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Civic Incentive Certificate</title>
+
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f2f2f2;
+            padding: 40px;
+        }
+
+        .certificate {
+            background: #ffffff;
+            max-width: 900px;
+            margin: auto;
+            padding: 50px;
+            border: 2px solid #2c3e50;
+        }
+
+        .top {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .top h1 {
+            font-size: 26px;
+            margin: 0;
+            letter-spacing: 1px;
+        }
+
+        .top p {
+            font-size: 13px;
+            color: #555;
+            margin-top: 6px;
+        }
+
+        .content {
+            margin-top: 40px;
+            font-size: 16px;
+            line-height: 1.8;
+        }
+
+        .content strong {
+            font-size: 20px;
+        }
+
+        .details {
+            margin-top: 40px;
+            display: flex;
+            justify-content: space-between;
+            font-size: 14px;
+        }
+
+        .footer {
+            margin-top: 60px;
+            display: flex;
+            justify-content: space-between;
+            font-size: 14px;
+        }
+
+        .muted {
+            color: #666;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="certificate">
+
+        <div class="top">
+            <h1>CIVIC INCENTIVE CERTIFICATE</h1>
+            <p>Issued under the Civic Issue Reporting System</p>
+        </div>
+
+        <div class="content">
+            <p>This is to certify that</p>
+
+            <p><strong>{{CITIZEN_NAME}}</strong></p>
+
+            <p>
+                has made verified civic contributions by responsibly reporting
+                public issues that were reviewed and resolved by authorized
+                municipal departments.
+            </p>
+
+            <p>
+                This certificate is issued as an official acknowledgment of the
+                citizen’s participation in improving civic infrastructure and
+                public services.
+            </p>
+
+            <p><strong>Total Verified Contribution Points:</strong> {{POINTS}}</p>
+        </div>
+
+        <div class="details">
+            <div>
+                <p><strong>Certificate ID:</strong> {{CERTIFICATE_ID}}</p>
+                <p><strong>Issued On:</strong> {{ISSUE_DATE}}</p>
+            </div>
+
+            <div>
+                <p><strong>Valid Until:</strong> {{VALID_UNTIL}}</p>
+                <p><strong>Verification Code:</strong> {{VERIFICATION_CODE}}</p>
+            </div>
+        </div>
+
+        <div class="footer">
+            <div>
+                <p><strong>Authorized By</strong></p>
+                <p class="muted">Civic Administration Authority</p>
+                <p class="muted">(System Generated Document)</p>
+            </div>
+
+            <div class="muted">
+                <p>Digitally verifiable</p>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
